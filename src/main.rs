@@ -67,7 +67,7 @@ async fn serenity(
     Ok(client.into())
 }
 
-// TODO: unit tests
+// TODO: #1 unit tests
 // #[cfg(test)]
 // mod tests {
 //     use super::*;
