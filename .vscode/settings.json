@@ -1,0 +1,10 @@
+{
+  "[rust]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "cSpell.words": [
+    "fxtwitter",
+    "lefthand"
+  ]
+}
