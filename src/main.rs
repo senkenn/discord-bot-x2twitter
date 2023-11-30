@@ -12,12 +12,8 @@ struct Bot;
 #[async_trait]
 impl EventHandler for Bot {
     async fn message(&self, ctx: Context, msg: Message) {
-        if msg.author.bot {
-            return;
-        }
-
         // if contains "x.com" or "twitter.com" in the message, only say url with replaced domain to "fxtwitter.com"
-        if msg.content.contains("x.com") || msg.content.contains("twitter.com") {
+        if msg.content.contains("https://x.com") || msg.content.contains("https://twitter.com") {
             let re = match Regex::new(r"(https://(x\.com|twitter\.com)[^\s]+)") {
                 Ok(re) => re,
                 Err(err) => {
